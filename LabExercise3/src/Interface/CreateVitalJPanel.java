@@ -166,6 +166,12 @@ public class CreateVitalJPanel extends javax.swing.JPanel {
 
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
         // TODO add your handling code here:
+         if(txtBloodPressure.getText().isEmpty()||txtTemperature.getText().isEmpty()||txtPulse.getText().isEmpty()||txtDate.getText().isEmpty()){
+            JOptionPane.showMessageDialog(null, "Don't accept empty value");
+        } 
+        
+        
+        
         double temperature = Double.parseDouble(txtTemperature.getText());
         double bp = Double.parseDouble(txtBloodPressure.getText());
         int pulse = Integer.parseInt(txtPulse.getText());

@@ -6,6 +6,7 @@ package Interface;
 
 import Business.VitalSignHistory;
 import Business.MedicineCatalog;
+import Business.VitalSigns;
 
 /**
  *
@@ -16,15 +17,15 @@ public class MainJFrame extends javax.swing.JFrame {
     /**
      * Creates new form MainJFrame
      */
-    
+    private VitalSigns vs;
     private VitalSignHistory vsh;
     private MedicineCatalog mcg;
     
     
     public MainJFrame() {
         initComponents();      
-        vsh = new VitalSignHistory();
-        mcg = new MedicineCatalog();
+        this.vsh = new VitalSignHistory();
+        this.mcg = new MedicineCatalog();
     }
 
     /**
@@ -135,26 +136,22 @@ public class MainJFrame extends javax.swing.JFrame {
 
     private void btnCreateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateActionPerformed
         // TODO add your handling code here:
-        CreateVitalJPanel createJPanel = new CreateVitalJPanel(vsh);
-        SplitPane.setRightComponent(createJPanel);
+        SplitPane.setRightComponent(new CreateVitalJPanel(this.vsh));
     }//GEN-LAST:event_btnCreateActionPerformed
 
     private void btnviewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnviewActionPerformed
         // TODO add your handling code here:
-        ViewVitalsJPanel viewPanel = new ViewVitalsJPanel(vsh);
-        SplitPane.setRightComponent(viewPanel);
+        SplitPane.setRightComponent(new ViewVitalsJPanel(this.vsh));
     }//GEN-LAST:event_btnviewActionPerformed
 
     private void medCatalogBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_medCatalogBtnActionPerformed
         // TODO add your handling code here:
-        mcatalogJPanel mc = new mcatalogJPanel(mcg);
-        SplitPane.setRightComponent(mc);
+        SplitPane.setRightComponent(new mcatalogJPanel(this.mcg));
     }//GEN-LAST:event_medCatalogBtnActionPerformed
 
     private void assignBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_assignBtnActionPerformed
         // TODO add your handling code here:
-        massignJPanel ma = new massignJPanel(mcg, vsh);
-        SplitPane.setRightComponent(ma);
+        SplitPane.setRightComponent(new massignJPanel(this.mcg, this.vsh));
     }//GEN-LAST:event_assignBtnActionPerformed
 
     /**

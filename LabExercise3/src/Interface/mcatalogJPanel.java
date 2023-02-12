@@ -187,6 +187,12 @@ public class mcatalogJPanel extends javax.swing.JPanel {
 
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
         // TODO add your handling code here:
+          if(txtDosage.getText().isEmpty()||txtmName.getText().isEmpty()){
+            JOptionPane.showMessageDialog(null, "Don't accept empty value");
+        } 
+
+
+
         String mname = txtmName.getText();
         double dosage = Integer.parseInt(txtDosage.getText());
         

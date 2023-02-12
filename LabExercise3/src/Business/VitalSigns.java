@@ -9,10 +9,10 @@ package Business;
  * @author cylai
  */
 public class VitalSigns {
-    private double temperature;
-    private double bloodPressure;
-    private int pulse;
-    private String date;
+    double temperature;
+    double bloodPressure;
+    int pulse;
+    String date;
 
     public double getTemperature() {
         return temperature;
@@ -45,6 +45,8 @@ public class VitalSigns {
     public void setDate(String date) {
         this.date = date;
     }
+
+   
     
     @Override
     public String toString()

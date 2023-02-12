@@ -12,7 +12,7 @@ import java.util.ArrayList;
  */
 public class VitalSignHistory {
     private ArrayList<VitalSigns> vitalSignHistory;
-    
+   
     
     public VitalSignHistory()
     {
@@ -49,7 +49,10 @@ public class VitalSignHistory {
         }
         return null;
     }
+
+
    
    
+    
    
 }
